@@ -66,7 +66,11 @@ public class MainActivity extends AppCompatActivity {
         tallennus("testi", bp);
         iv.setImageBitmap(bp);
     }
-    //yrittaa tallentaa ja annettu permission to write
+
+    /**
+     *     yrittaa tallentaa ja annettu permission to write
+     */
+
     public void tallennus(String nimi, Bitmap bmp){
     Log.i("tallennus", "Tallennus alkoi");
         String path = Environment.getExternalStorageDirectory().toString();
