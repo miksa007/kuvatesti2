@@ -24,6 +24,7 @@ import java.io.IOException;
  * http://www.tutorialspoint.com/android/android_camera.htm
  */
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
     Button b1, b2;
     ImageView iv;
     File tempFile;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         b1=(Button)findViewById(R.id.button);
+        b2=(Button)findViewById(R.id.button2);
         iv=(ImageView)findViewById(R.id.imageView);
 
         //tiedoston nimeeminen
@@ -56,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Log.d(TAG, "b2 pressed");
+            }
+        });
+
     }
     protected void onActivityResult(int requestCode, int resultCode,  Intent data) {
         // TODO Auto-generated method stub
